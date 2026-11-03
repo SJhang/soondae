@@ -101,6 +101,32 @@ and NPCs as your characters saw them, and every walk in progress is listed with 
 
 ![The Map page: the atlas list with sizes, door counts and regions, "you are here" on the character's map](images/map.png)
 
+**Open a map** and its card draws the floor the way the game does, a diamond with its corner tiles, each door numbered
+where it stands, and your character on it:
+
+![A map's card: Mount Giragan 22 drawn as a diamond, its three doors numbered, guns standing on it](images/map-card.png)
+
+Under the drawing, everything the tool knows about that map:
+
+- **Doors**: each door's tile, where it leads and where you land, which characters walked through it, and its trust.
+  Click one to say it works, is not a door, or goes somewhere else. The game's own traps are named: this door's
+  tile 0,10 drops you on a tile you cannot walk off, so no walk steps on it and the rest of the door is used.
+- **Reached from**: the maps with a door into this one.
+- **Waypoints**: the sets saved on this map and the hunts that use them, and **Build waypoints** for a starter loop.
+- **Monsters here**: every monster the server showed your characters, with its sprite, how often it was seen and on
+  how many days, the kills logged and what they dropped. Click one for its Codex page.
+- **The server's map** and **Sources**: whether the server agrees with the atlas, and where each fact came from.
+
+![A map's doors, waypoints and monsters: three proven doors, one with the game's trap tile named, and Dire Wolf, Ice Elemental and Ice Skeleton with their sprites](images/map-doors.png)
+
+**How its maps connect** draws the whole area as a graph: every map a box, every door a line coloured by its proof
+(green proven, gold unproven, white contradicted, red refused), an arrow for a one-way door, the character's map marked,
+and your route as a thick gold line. Click a box for the shortest way there. **Shift-click** a stretch of maps (open 31,
+shift-click 40) and they become a hunt's circuit, each way between them checked on the atlas and a loop planned on each
+map. A party leader's party can **Gather here, then farm** from the same card.
+
+![Mount Giragan: how its maps connect, from 12 at the entrance through the branches to 33, Ice Cave 0, 13 and 23, with guns on 19](images/map-graph.png)
+
 ---
 
 ## Quests

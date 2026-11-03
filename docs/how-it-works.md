@@ -25,7 +25,10 @@ tick. Each release folds what players' characters proved back into the shipped a
 You can see all of it on **Go ▸ Map**: each door's verdict and who saw it, and your own word on a door ("not a door",
 "goes somewhere else", "broken") which every character follows until the server proves otherwise.
 
-![The Map page](images/map.png)
+![An area's maps and how they connect: every door a line coloured by its proof, a one-way door an arrow](images/map-graph.png)
+
+Each map's card shows its doors with what proves each, and the monsters the server showed your characters there; see
+[the Map page](guide.md#map).
 
 ## The learners
 

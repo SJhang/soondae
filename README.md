@@ -33,6 +33,8 @@
 - **Knows the world**: a map atlas of every map and door, learned from what the server did when your characters
   stepped on them, a route to any map in one click, and a Codex of every item, monster, NPC, skill, spell and quest.
   [How it works](docs/how-it-works.md)
+
+  <img src="docs/images/map-graph.png" width="720" alt="Mount Giragan: how its maps connect, every door a line coloured by its proof">
 - **One window for every character**: launch, watch, pause and set each one up from the same place, in the game's own
   pixel style, with cards drawn over the game windows and a Discord bot to check on them from your phone.
 
