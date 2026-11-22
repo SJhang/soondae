@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Coins Between Keycaps</title>
-<meta name="description" content="A Dark Ages story from a Windows 95 PC in 1999 to building Soondae: eight pixel-art chapters and a playbook for anyone coming back to an old game.">
+<meta name="description" content="My Dark Ages Legend, Deoch 1 to now: from a Windows 95 PC in 1999 to building Soondae, in eight pixel-art chapters, with a playbook for starting your own.">
 <meta name="theme-color" content="#d9a441">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Soondae">
 <meta property="og:title" content="Coins Between Keycaps">
-<meta property="og:description" content="A Dark Ages story from a Windows 95 PC in 1999 to building Soondae: eight pixel-art chapters and a playbook for anyone coming back to an old game.">
+<meta property="og:description" content="My Dark Ages Legend, Deoch 1 to now: from a Windows 95 PC in 1999 to building Soondae, in eight pixel-art chapters, with a playbook for starting your own.">
 <meta property="og:url" content="https://sjhang.github.io/soondae/">
 <meta property="og:image" content="https://sjhang.github.io/soondae/og.png">
 <meta property="og:image:width" content="1200">
@@ -17,7 +17,7 @@
 <meta property="og:image:alt" content="Pixel art of a keyboard with gold coins wedged between the keycaps, beside the title Coins Between Keycaps">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Coins Between Keycaps">
-<meta name="twitter:description" content="A Dark Ages story from a Windows 95 PC in 1999 to building Soondae: eight pixel-art chapters and a playbook for anyone coming back to an old game.">
+<meta name="twitter:description" content="My Dark Ages Legend, Deoch 1 to now: from a Windows 95 PC in 1999 to building Soondae, in eight pixel-art chapters, with a playbook for starting your own.">
 <meta name="twitter:image" content="https://sjhang.github.io/soondae/og.png">
 <link rel="icon" href="og-icon.png" type="image/png">
 <style>html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
@@ -113,6 +113,14 @@ h1 .glint { color: var(--gold); }
   font-family: var(--f-display); font-size: 1.35rem; color: var(--gold);
   border-left: 2px solid var(--gold); padding-left: .9rem;
 }
+.marks { list-style: none; margin: .2rem 0 0; padding: .8rem 0 0; border-top: 2px dashed var(--rule); display: grid; gap: .45rem; }
+.marks li { display: flex; gap: .7rem; align-items: baseline; font-family: var(--f-display); font-weight: 500; font-size: 1rem; line-height: 1.3; color: var(--spell); }
+.marks li::before { content: ""; flex: none; width: 10px; height: 10px; background: var(--gold); box-shadow: inset -2px -2px 0 rgba(0,0,0,.3), inset 2px 2px 0 rgba(255,255,255,.3); transform: translateY(1px); }
+.marks .dt { color: var(--ash); white-space: nowrap; }
+.clock { display: flex; flex-wrap: wrap; gap: .4rem 1rem; align-items: baseline; margin: 0; font-family: var(--f-display); font-size: 1.05rem; color: var(--spell); }
+.clock .label { color: var(--ash); }
+.clock small { font-family: var(--f-body); font-size: .9rem; color: var(--ash); font-style: italic; }
+.marks-label { font-family: var(--f-label); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ash); }
 .gloss { font-size: .95rem; color: var(--ash); }
 .gloss i { color: var(--vellum); }
 
@@ -175,15 +183,16 @@ h1 .glint { color: var(--gold); }
 <body>
 <div class="wrap">
   <header class="hero">
-    <div class="eyebrow">A Dark Ages story · 1999 to now</div>
+    <div class="eyebrow">My Legend · Deoch 1 to now</div>
     <h1>Coins Between <span class="glint">Keycaps</span></h1>
-    <p class="lede">From a Windows 95 PC at nine years old, to a crypt in a game I thought was gone, to building my own tool for it twenty-seven years later.</p>
+    <p class="lede">Every Aisling's Legend is a list of marks. Mine started on a Windows 95 PC at nine years old, picked up again in a crypt seventeen years later, and is still being written in a tool I'm building for the game.</p>
     <ul class="firsts" aria-label="Firsts from 1999">
       <li><b>First</b> email</li>
       <li><b>First</b> website</li>
       <li><b>First</b> Google account</li>
       <li><b>First</b> online RPG</li>
     </ul>
+    <p class="clock" title="One Temuairan day is three real hours. Reckoned from the date the game server announces."><span class="label">Temuair now</span><span data-clock>Deoch 224</span><small>Every date on this page is in Deochs, the way the game keeps time.</small></p>
     <p class="byline">By <a href="https://github.com/SJhang">SJhang</a>, player, and the person behind Soondae</p>
   </header>
 
@@ -196,12 +205,16 @@ h1 .glint { color: var(--gold); }
           <figcaption>Windows 95, a CRT, and a game window glowing teal.</figcaption>
         </figure>
         <div class="text">
-          <div class="when">1999 · Age 9</div>
+          <div class="when">Deoch 1 · 1999 · Age 9</div>
           <h2><span class="num">I</span>The first computer</h2>
           <p>I got my first computer in 1999, when I was nine. It ran Windows 95, and it brought a run of firsts with it: my first email, my first website, my first Google account, and my first online RPG.</p>
           <p>That game was LoD, <i>Legend of Darkness</i>, the Korean version of Dark Ages. What hooked me was that nobody advanced alone. Every class had its own role, and moving forward meant finding the people who filled the others. My friends and I spent every hour we could in it, right up until the free trial ran out.</p>
           <p>Then my mom took my PC away, worried I'd become a game addict.</p>
           <p class="quip">Too late. I'd already OD'd.</p>
+          <ul class="marks" aria-label="Legend marks">
+            <li><span>Aisling of Legend of Darkness, age 9 <span class="dt">- Deoch 1</span></span></li>
+            <li>Ran the free trial to its last hour</li>
+          </ul>
         </div>
       </article>
 
@@ -211,10 +224,14 @@ h1 .glint { color: var(--gold); }
           <figcaption>A lot of worlds. None of them needed me.</figcaption>
         </figure>
         <div class="text">
-          <div class="when">The years after</div>
+          <div class="when">The Deochs between</div>
           <h2><span class="num">II</span>Nothing scratched the spot</h2>
           <p>Diablo II, MapleStory, Ragnarok, Aion and countless other RPGs and MMOs followed. None of them scratched the same spot.</p>
           <p>Newer games let you advance on your own, which was almost unthinkable in DA. Dark Ages was built as a real role-playing game: you needed other people, and they needed you.</p>
+          <p>Those games gave me levels. None of them gave me a Legend.</p>
+          <ul class="marks" aria-label="Legend marks">
+            <li>Wandered other worlds, none of them home</li>
+          </ul>
         </div>
       </article>
 
@@ -224,10 +241,14 @@ h1 .glint { color: var(--gold); }
           <figcaption>Before the script: coins holding the keys down overnight.</figcaption>
         </figure>
         <div class="text">
-          <div class="when">Growing up in the game</div>
+          <div class="when">The early Deochs · growing up in the game</div>
           <h2><span class="num">III</span>Coins between keycaps</h2>
           <p>I had highs and lows growing up in that community. It taught me how to talk to strangers, and I grew socially both inside the game and out of it.</p>
           <p>It's also where I wrote my first ever code: an AutoHotkey loop to level up my Wind Blade proficiency. Before that, I wedged coins between my keycaps to hold the keys down.</p>
+          <ul class="marks" aria-label="Legend marks">
+            <li>Learned to talk to strangers</li>
+            <li>First code: a Wind Blade loop in AutoHotkey</li>
+          </ul>
         </div>
       </article>
 
@@ -237,10 +258,13 @@ h1 .glint { color: var(--gold); }
           <figcaption>Back in the crypt, farming like it's day one.</figcaption>
         </figure>
         <div class="text">
-          <div class="when">Seventeen years later</div>
+          <div class="when">Deoch 222, 2nd Moon · seventeen years later</div>
           <h2><span class="num">IV</span>Still alive in the States</h2>
           <p>Seventeen years later, I ran into a YouTube video and found out there was still a live Dark Ages community in the States.</p>
           <p>I made an account to relive my childhood, started farming in the crypt, and ran into Zerio: the guru, the boss.</p>
+          <ul class="marks" aria-label="Legend marks">
+            <li><span>Returned to Temuair after 17 years <span class="dt">- Deoch 222</span></span></li>
+          </ul>
         </div>
       </article>
 
@@ -250,10 +274,14 @@ h1 .glint { color: var(--gold); }
           <figcaption>A stranger with time to spare, and a guild full of balloons.</figcaption>
         </figure>
         <div class="text">
-          <div class="when">Week one</div>
+          <div class="when">Deoch 222 · week one</div>
           <h2><span class="num">V</span>A stranger who stopped to help</h2>
           <p>Zerio was a stranger, but a kind and generous one, who stepped me through everything I needed to know to fully indulge in the game.</p>
           <p>I bought my first reg because I wanted to join the guild: <b>The Balloon Boys</b>.</p>
+          <ul class="marks" aria-label="Legend marks">
+            <li><span>Guided by Zerio <span class="dt">- Deoch 222</span></span></li>
+            <li><span>Joined The Balloon Boys <span class="dt">- Deoch 222</span></span></li>
+          </ul>
         </div>
       </article>
 
@@ -263,10 +291,14 @@ h1 .glint { color: var(--gold); }
           <figcaption>The whole community in one room.</figcaption>
         </figure>
         <div class="text">
-          <div class="when">Week one, still</div>
+          <div class="when">Deoch 222 · week one, still</div>
           <h2><span class="num">VI</span>High Priestess of Glioca</h2>
           <p>In my very first week, Yuka became High Priestess of Glioca, and I got to be part of a heartwarming event with the whole DA community.</p>
           <p>I was also lucky enough to win a giveaway, a pair of AB99 greaves. That's what got me thinking: I want to experience the end-game content with these people, while I still can.</p>
+          <ul class="marks" aria-label="Legend marks">
+            <li><span>Witnessed Yuka become High Priestess of Glioca <span class="dt">- Deoch 222</span></span></li>
+            <li><span>Won AB99 greaves in a giveaway <span class="dt">- Deoch 222</span></span></li>
+          </ul>
         </div>
       </article>
 
@@ -276,11 +308,14 @@ h1 .glint { color: var(--gold); }
           <figcaption>AB99. The giveaway that changed the plan.</figcaption>
         </figure>
         <div class="text">
-          <div class="when">The last three months</div>
+          <div class="when">Deoch 222 to 224 · the last three months</div>
           <h2><span class="num">VII</span>The most giving people I've played with</h2>
           <p>That's been my journey for the last three months. So much help, so many shoutouts, so many sabonims and warm-hearted people. I have yet to be part of another online community with people this giving.</p>
           <p class="gloss"><i>Sabonim</i>: Korean for a respected teacher, the word I keep coming back to for the players who taught me.</p>
-          <p>DA went from a nostalgic memory to part of my daily login.</p>
+          <p>DA went from a nostalgic memory to part of my daily login, and my Legend got longer than it ever did as a kid.</p>
+          <ul class="marks" aria-label="Legend marks">
+            <li><span>Taught by many sabonims <span class="dt">- Deoch 222 to 224</span></span></li>
+          </ul>
         </div>
       </article>
 
@@ -290,10 +325,14 @@ h1 .glint { color: var(--gold); }
           <figcaption>Code on the left, Temuair on the right.</figcaption>
         </figure>
         <div class="text">
-          <div class="when">Now</div>
+          <div class="when">Now · <span data-clock>Deoch 224</span></div>
           <h2><span class="num">VIII</span>Riddles, giving back, and a tool of my own</h2>
           <p>So here I am: solving riddles, giving back to the community, and building my own tool.</p>
           <p>I write code for a living, and DA was the first spark. Solving problems, fixing what's broken, making everyday life a little easier: it started with a Wind Blade loop.</p>
+          <ul class="marks" aria-label="Legend marks">
+            <li>Solved riddles for the community</li>
+            <li><span>Builder of Soondae <span class="dt">- Deoch 224</span></span></li>
+          </ul>
         </div>
       </article>
     </section>
@@ -301,8 +340,8 @@ h1 .glint { color: var(--gold); }
     <section aria-labelledby="playbook">
       <div class="section-head">
         <div class="eyebrow">The playbook</div>
-        <h2 id="playbook">For anyone finding their way back</h2>
-        <p>Everything that worked for me, in the order it happened. If you left an old game behind years ago, this is how coming home went.</p>
+        <h2 id="playbook">Start your own Legend</h2>
+        <p>For anyone finding their way back. Everything that worked for me, in the order it happened. Each play is a mark waiting on your Legend.</p>
       </div>
       <ol class="plays">
         <li class="play">
@@ -362,7 +401,7 @@ h1 .glint { color: var(--gold); }
       </div>
       <figure class="scene">
         <canvas width="80" height="56" data-scene="campfire" aria-label="Pixel drawing of Aislings gathered around a campfire under the stars"></canvas>
-        <figcaption>See you in Temuair.</figcaption>
+        <figcaption>See you in Temuair. Come add a mark to my Legend.</figcaption>
       </figure>
     </section>
   </main>
@@ -579,6 +618,22 @@ h1 .glint { color: var(--gold); }
     }
     setInterval(() => { if (document.hidden) return; t++; visible.forEach(draw); }, 140);
   }
+
+  // Temuairan clock. The server announces dates like "Deoch 224, 2nd Moon, 10th Sun, 7 a.m."; logged against real
+  // time, one Temuairan hour is 7.5 real minutes (a day is three real hours). Anchor: the 1st Sun of Deoch 224's
+  // 2nd Moon began about 2026-11-19 12:00 UTC. The 12th and 1st Moons both ran 31 Suns; other moons may be shorter,
+  // so the clock can drift by a Sun per moon until it is re-anchored.
+  const ANCHOR = Date.UTC(2026, 10, 19, 12, 0, 0), HOUR_MS = 450000, SUNS = 31;
+  const ord = n => n + ((n % 100 >= 11 && n % 100 <= 13) ? "th" : ["th", "st", "nd", "rd"][n % 10] || "th");
+  const temuair = ms => {
+    const h = Math.max(0, Math.floor((ms - ANCHOR) / HOUR_MS)), days = Math.floor(h / 24), hour = h % 24;
+    const moons = 1 + Math.floor(days / SUNS);
+    const deoch = 224 + Math.floor(moons / 12), moon = (moons % 12) + 1, sun = (days % SUNS) + 1;
+    const clock = (hour % 12 || 12) + (hour < 12 ? " a.m." : " p.m.");
+    return `Deoch ${deoch}, ${ord(moon)} Moon, ${ord(sun)} Sun, ${clock}`;
+  };
+  const tick = () => { const s = temuair(Date.now()); document.querySelectorAll("[data-clock]").forEach(el => { el.textContent = s; }); };
+  tick(); setInterval(tick, 15000);
 
   const btn = document.getElementById("copy"), note = document.getElementById("copied");
   btn.addEventListener("click", () => {
