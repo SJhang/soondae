@@ -11,19 +11,19 @@
 <meta property="og:title" content="Coins Between Keycaps">
 <meta property="og:description" content="My Dark Ages Legend, Deoch 1 to now: from a Windows 95 PC in 1999 to building Soondae, in nine pixel-art chapters, still being written, with a playbook for starting your own.">
 <meta property="og:url" content="https://sjhang.github.io/soondae/">
-<meta property="og:image" content="https://sjhang.github.io/soondae/og.png">
+<meta property="og:image" content="https://sjhang.github.io/soondae/og.png?v=4">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Pixel art of a keyboard with gold coins wedged between the keycaps, beside the title Coins Between Keycaps">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Coins Between Keycaps">
 <meta name="twitter:description" content="My Dark Ages Legend, Deoch 1 to now: from a Windows 95 PC in 1999 to building Soondae, in nine pixel-art chapters, still being written, with a playbook for starting your own.">
-<meta name="twitter:image" content="https://sjhang.github.io/soondae/og.png">
+<meta name="twitter:image" content="https://sjhang.github.io/soondae/og.png?v=4">
 <link rel="icon" href="og-icon.png" type="image/png">
 <style>html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Pixelify+Sans:wght@500;700&family=Silkscreen&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: a quest log read top to bottom. A gold rail runs down the chapters (the timeline is real),
    each chapter pairs a pixel scene drawn on canvas with its text; the playbook follows as scroll cards. */
@@ -35,9 +35,11 @@
   --ash: #a7a597;       /* secondary text */
   --gold: #d9a441;      /* illumination: rail, numerals, links */
   --spell: #7cc0cf;     /* cool accent, used sparingly */
-  --f-display: "Pixelify Sans", "Courier New", monospace;
-  --f-body: "Alegreya", Georgia, "Times New Roman", serif;
-  --f-label: "Silkscreen", "Courier New", monospace;
+  /* Soondae's own type (web/src/kit/tokens.css): Montserrat for names and text, JetBrains Mono for data. */
+  --f-display: "Montserrat", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Montserrat", "Segoe UI", system-ui, sans-serif;
+  --f-label: "Montserrat", "Segoe UI", system-ui, sans-serif;
+  --f-data: "JetBrains Mono", "Cascadia Mono", Consolas, monospace;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -45,8 +47,8 @@ body {
   background: var(--peat);
   color: var(--vellum);
   font-family: var(--f-body);
-  font-size: 1.125rem;
-  line-height: 1.65;
+  font-size: 1.04rem;
+  line-height: 1.72;
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
   padding-block: 0 4rem;
@@ -59,28 +61,30 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--spell); outline
 .hero { padding-block: 4.5rem 3rem; display: grid; gap: 1.5rem; }
 .eyebrow, .when, .label {
   font-family: var(--f-label);
+  font-weight: 700;
   font-size: .75rem;
-  letter-spacing: .08em;
+  letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--gold);
 }
 h1 {
   font-family: var(--f-display);
-  font-weight: 700;
-  font-size: clamp(2.6rem, 8vw, 5.4rem);
-  line-height: .95;
+  font-weight: 800;
+  font-size: clamp(2.4rem, 7.4vw, 5rem);
+  line-height: 1;
+  letter-spacing: -.02em;
   margin: 0;
   text-wrap: balance;
   max-width: 12ch;
 }
 h1 .glint { color: var(--gold); }
-.lede { font-size: 1.3rem; max-width: 34em; margin: 0; color: var(--vellum); }
+.lede { font-size: 1.18rem; font-weight: 500; max-width: 34em; margin: 0; color: var(--vellum); }
 .firsts { display: flex; flex-wrap: wrap; gap: .6rem; margin: .5rem 0 0; padding: 0; list-style: none; }
 .firsts li {
-  font-family: var(--f-label); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase;
+  font-family: var(--f-label); font-weight: 600; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase;
   border: 2px solid var(--rule); padding: .35rem .6rem; color: var(--ash);
 }
-.firsts li b { color: var(--vellum); font-weight: 400; }
+.firsts li b { color: var(--vellum); font-weight: 700; }
 .byline { color: var(--ash); font-size: 1rem; margin: 0; }
 
 /* Story: chapters along a rail */
@@ -104,22 +108,22 @@ h1 .glint { color: var(--gold); }
 .scene figcaption { font-size: .9rem; color: var(--ash); font-style: italic; }
 .text { min-width: 0; display: grid; gap: .9rem; }
 .text h2 {
-  font-family: var(--f-display); font-weight: 500; font-size: clamp(1.6rem, 3.6vw, 2.2rem);
-  line-height: 1.1; margin: 0; text-wrap: balance;
+  font-family: var(--f-display); font-weight: 700; font-size: clamp(1.5rem, 3.2vw, 2rem);
+  line-height: 1.15; letter-spacing: -.01em; margin: 0; text-wrap: balance;
 }
 .text h2 .num { color: var(--gold); margin-right: .4em; }
 .text p { margin: 0; max-width: 36em; }
 .quip {
-  font-family: var(--f-display); font-size: 1.35rem; color: var(--gold);
+  font-family: var(--f-display); font-weight: 700; font-style: italic; font-size: 1.25rem; color: var(--gold);
   border-left: 2px solid var(--gold); padding-left: .9rem;
 }
 .marks { list-style: none; margin: .2rem 0 0; padding: .8rem 0 0; border-top: 2px dashed var(--rule); display: grid; gap: .45rem; }
-.marks li { display: flex; gap: .7rem; align-items: baseline; font-family: var(--f-display); font-weight: 500; font-size: 1rem; line-height: 1.3; color: var(--spell); }
+.marks li { display: flex; gap: .7rem; align-items: baseline; font-family: var(--f-display); font-weight: 600; font-size: .95rem; line-height: 1.35; color: var(--spell); }
 .marks li::before { content: ""; flex: none; width: 10px; height: 10px; background: var(--gold); box-shadow: inset -2px -2px 0 rgba(0,0,0,.3), inset 2px 2px 0 rgba(255,255,255,.3); transform: translateY(1px); }
 .marks.many { grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); column-gap: 1.2rem; }
-.marks .dt { color: var(--ash); white-space: nowrap; }
-.clock { display: flex; flex-wrap: wrap; gap: .4rem 1rem; align-items: baseline; margin: 0; font-family: var(--f-display); font-size: 1.05rem; color: var(--spell); }
-.clock .label { color: var(--ash); }
+.marks .dt { color: var(--ash); font-family: var(--f-data); font-weight: 400; font-size: .85rem; white-space: nowrap; }
+.clock { display: flex; flex-wrap: wrap; gap: .4rem 1rem; align-items: baseline; margin: 0; font-family: var(--f-data); font-size: .98rem; color: var(--spell); font-variant-numeric: tabular-nums; }
+.clock .label { color: var(--ash); font-family: var(--f-label); font-weight: 700; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
 .clock small { font-family: var(--f-body); font-size: .9rem; color: var(--ash); font-style: italic; }
 .marks-label { font-family: var(--f-label); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ash); }
 .gloss { font-size: .95rem; color: var(--ash); }
@@ -127,7 +131,7 @@ h1 .glint { color: var(--gold); }
 
 /* Playbook */
 .section-head { margin-top: 6rem; display: grid; gap: .8rem; max-width: 40em; }
-.section-head h2 { font-family: var(--f-display); font-weight: 700; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1; margin: 0; text-wrap: balance; }
+.section-head h2 { font-family: var(--f-display); font-weight: 800; font-size: clamp(1.9rem, 4.6vw, 3rem); line-height: 1.05; letter-spacing: -.02em; margin: 0; text-wrap: balance; }
 .section-head p { margin: 0; color: var(--ash); }
 .plays {
   list-style: none; padding: 0; margin: 2.5rem 0 0;
@@ -141,10 +145,10 @@ h1 .glint { color: var(--gold); }
 }
 .play::before {
   content: "Play " counter(play, upper-roman);
-  font-family: var(--f-label); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gold);
+  font-family: var(--f-label); font-weight: 700; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gold);
 }
-.play h3 { font-family: var(--f-display); font-weight: 500; font-size: 1.3rem; line-height: 1.15; margin: 0; text-wrap: balance; }
-.play p { margin: 0; font-size: 1.02rem; }
+.play h3 { font-family: var(--f-display); font-weight: 700; font-size: 1.18rem; line-height: 1.15; margin: 0; text-wrap: balance; }
+.play p { margin: 0; font-size: .97rem; }
 .play .from { font-size: .9rem; color: var(--ash); font-style: italic; }
 .play.builder { border-color: var(--gold); }
 
@@ -153,23 +157,23 @@ h1 .glint { color: var(--gold); }
   margin-top: 6rem; border-top: 2px solid var(--rule); padding-top: 3rem;
   display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2.5rem; align-items: center;
 }
-.closing h2 { font-family: var(--f-display); font-weight: 700; font-size: clamp(1.8rem, 4.4vw, 2.8rem); line-height: 1.05; margin: 0 0 1rem; text-wrap: balance; }
+.closing h2 { font-family: var(--f-display); font-weight: 800; letter-spacing: -.02em; font-size: clamp(1.7rem, 4vw, 2.5rem); line-height: 1.05; margin: 0 0 1rem; text-wrap: balance; }
 .closing p { margin: 0 0 1rem; max-width: 34em; }
 .repo { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; margin-top: 1.25rem; }
 .repo code {
-  font-family: var(--f-label); font-size: .8rem; letter-spacing: .03em;
+  font-family: var(--f-data); font-size: .85rem;
   border: 2px solid var(--rule); padding: .55rem .75rem; color: var(--vellum);
   user-select: all; overflow-wrap: anywhere;
 }
 .btn {
-  font-family: var(--f-label); font-size: .78rem; letter-spacing: .06em; text-transform: uppercase;
+  font-family: var(--f-label); font-weight: 700; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase;
   background: var(--gold); color: var(--peat); border: 0; padding: .65rem .9rem; cursor: pointer;
   box-shadow: inset -2px -2px 0 rgba(0,0,0,.25), inset 2px 2px 0 rgba(255,255,255,.25);
 }
 .btn:hover { filter: brightness(1.08); }
 .btn:active { box-shadow: inset 2px 2px 0 rgba(0,0,0,.25); }
 .btn.ghost { background: transparent; color: var(--gold); border: 2px solid var(--gold); box-shadow: none; text-decoration: none; }
-.copied { font-family: var(--f-label); font-size: .72rem; color: var(--spell); min-width: 6ch; }
+.copied { font-family: var(--f-label); font-weight: 700; font-size: .72rem; color: var(--spell); min-width: 6ch; }
 
 @media (max-width: 760px) {
   .chapter, .closing { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
@@ -177,7 +181,7 @@ h1 .glint { color: var(--gold); }
   .story { padding-left: 1.5rem; gap: 3rem; }
   .chapter::before { left: calc(-1.5rem + 1px); }
   .hero { padding-block: 3rem 2rem; }
-  body { font-size: 1.06rem; }
+  body { font-size: 1rem; }
 }
 </style>
 </head>
